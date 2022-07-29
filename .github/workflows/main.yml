@@ -31,7 +31,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build and analyze
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          GITHUB_TOKEN: ${{ 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 }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ sqp_78f88de13d803043a53cedcb49c6493174f37214 }}
+          SONAR_HOST_URL: ${{ 127.0.0.1:9000 }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=a
